@@ -9,26 +9,29 @@
     body { display:flex; justify-content:center; align-items:center; }
     .container { position: relative; width:100vw; height:100vh; overflow:hidden; }
     .landing-image { width:100%; height:100%; object-fit:cover; display:block; }
-    /* Transparent hotspots using percentages - adjust % values visually with DevTools */
-    .hotspot {
-      position: absolute;
-      background: rgba(255,255,255,0.0);
-    }
-    /* Example coordinates - customize in browser dev tools */
-    .hotspot.linkedin { top: 85%; left: 38%; width: 5%; height: 5%; }
-    .hotspot.x        { top: 85%; left: 48%; width: 5%; height: 5%; }
-    .hotspot.email    { top: 85%; left: 58%; width: 5%; height: 5%; }
-    .hotspot.book     { top: 40%; left: 42%; width: 16%; height: 6%; }
+    .hotspot { position:absolute; cursor:pointer; }
+    /* Adjust percentages to exactly overlay your logos and button */
+    .hotspot.linkedin { top:85%; left:38%; width:5%; height:5%; }
+    .hotspot.x        { top:85%; left:48%; width:5%; height:5%; }
+    .hotspot.email    { top:85%; left:58%; width:5%; height:5%; }
+    .hotspot.book     { top:40%; left:42%; width:16%; height:6%; }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="./dina-landing-page.png" alt="Dina Landing Page" class="landing-image" />
-    <a href="https://www.linkedin.com/in/hashirjaffry/" class="hotspot linkedin" target="_blank" aria-label="LinkedIn"></a>
-    <a href="https://x.com/dina_cfo" class="hotspot x" target="_blank" aria-label="X"></a>
-    <a href="mailto:hashir@dinacfo.com" class="hotspot email" aria-label="Email"></a>
-    <a href="https://cal.com/hashirjaffry/30min?overlayCalendar=true" class="hotspot book" target="_blank" aria-label="Book a call"></a>
+    <div class="hotspot linkedin" onclick="window.open('https://www.linkedin.com/in/hashirjaffry/','_blank')"></div>
+    <div class="hotspot x" onclick="window.open('https://x.com/dina_cfo','_blank')"></div>
+    <div class="hotspot email" onclick="window.location.href='mailto:hashir@dinacfo.com'"></div>
+    <div class="hotspot book" id="book-spot"></div>
   </div>
+  <!-- Cal.com popup widget script -->
+  <script src="https://assets.cal.com/embed.js" async></script>
+  <script>
+    document.getElementById('book-spot').addEventListener('click', function(e) {
+      Cal.createPopupWidget({ url: 'https://cal.com/hashirjaffry/30min?overlayCalendar=true', open: true });
+    });
+  </script>
 </body>
 </html>
 
