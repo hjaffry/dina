@@ -19,19 +19,46 @@
       background: var(--bg);
       display: flex;
       justify-content: center;
-      align-items: flex-start; /* align to top to avoid vertical shift */
-      padding-top: 20px; /* optional top spacing */
+      align-items: flex-start;
+      padding-top: 20px;
+    }
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
     }
     .landing-image {
       display: block;
-      max-width: 100%;
+      width: 100%;
       height: auto;
-      margin: 0 auto;
+    }
+    .hotspot {
+      position: absolute;
+      display: block;
+      cursor: pointer;
+      background: rgba(255,255,255,0);
+      z-index: 10;
+      position: absolute;
+      cursor: pointer;
+      background: rgba(255,255,255,0);
+    }
+    /* Adjust these percentage values as needed to overlay your image's logos & button */
+    .book {
+      top: 42%; left: 29%; width: 42%; height: 8%;
+    }
+    .linkedin {
+      top: 88%; left: 38%; width: 6%; height: 6%;
+    }
+    .x {
+      top: 88%; left: 49%; width: 6%; height: 6%;
+    }
+    .email {
+      top: 88%; left: 60%; width: 6%; height: 6%;
     }
   </style>
 </head>
 <body>
- <div class="container">
+  <div class="container">
     <!-- Full-page PNG with embedded logos and button -->
     <img src="./dina-landing-page.png" alt="Dina Landing Page" class="landing-image" />
 
