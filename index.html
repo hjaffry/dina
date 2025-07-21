@@ -5,33 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dina Landing Page</title>
   <style>
-    html, body { margin:0; padding:0; width:100%; height:100%; background:#133918; }
-    body { display:flex; justify-content:center; align-items:center; }
-    .container { position: relative; width:100vw; height:100vh; overflow:hidden; }
-    .landing-image { width:100%; height:100%; object-fit:cover; display:block; }
-    .hotspot { position:absolute; cursor:pointer; }
-    /* Adjust percentages to exactly overlay your logos and button */
-    .hotspot.linkedin { top:85%; left:38%; width:5%; height:5%; }
-    .hotspot.x        { top:85%; left:48%; width:5%; height:5%; }
-    .hotspot.email    { top:85%; left:58%; width:5%; height:5%; }
-    .hotspot.book     { top:40%; left:42%; width:16%; height:6%; }
+    html, body { margin:0; padding:0; width:100%; height:100%; overflow:hidden; background:#133918; }
+    img { display:block; width:100vw; height:100vh; object-fit:cover; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="./dina-landing-page.png" alt="Dina Landing Page" class="landing-image" />
-    <div class="hotspot linkedin" onclick="window.open('https://www.linkedin.com/in/hashirjaffry/','_blank')"></div>
-    <div class="hotspot x" onclick="window.open('https://x.com/dina_cfo','_blank')"></div>
-    <div class="hotspot email" onclick="window.location.href='mailto:hashir@dinacfo.com'"></div>
-    <div class="hotspot book" id="book-spot"></div>
-  </div>
-  <!-- Cal.com popup widget script -->
-  <script src="https://assets.cal.com/embed.js" async></script>
-  <script>
-    document.getElementById('book-spot').addEventListener('click', function(e) {
-      Cal.createPopupWidget({ url: 'https://cal.com/hashirjaffry/30min?overlayCalendar=true', open: true });
-    });
-  </script>
+  <img src="./dina-landing-page.png" usemap="#socialmap" alt="Dina Landing Page">
+  <map name="socialmap">
+    <!-- Example coords: x1,y1,x2,y2 -->
+    <area shape="rect" coords="360,1640,420,1700"
+          href="https://www.linkedin.com/in/hashirjaffry/" target="_blank" alt="LinkedIn">
+    <area shape="rect" coords="460,1640,520,1700"
+          href="https://x.com/dina_cfo" target="_blank" alt="X">
+    <area shape="rect" coords="560,1640,620,1700"
+          href="mailto:hashir@dinacfo.com" alt="Email">
+    <area shape="rect" coords="300,400,700,480"
+          href="https://cal.com/hashirjaffry/30min?overlayCalendar=true" target="_blank" alt="Book a call">
+  </map>
 </body>
 </html>
 
