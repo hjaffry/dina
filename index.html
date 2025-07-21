@@ -3,28 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dina — AI CFO for the Private Markets</title>
-  <link href="https://fonts.cdnfonts.com/css/neue-machina" rel="stylesheet">
+  <title>Dina Landing Page</title>
   <style>
-    :root {
-      --bg: #133918;
-      --font: 'Neue Machina', sans-serif;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: var(--bg); font-family: var(--font); }
-    .container { position: relative; text-align: center; }
-    .landing-image { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+    body { margin: 0; background: #133918; display: flex; justify-content: center; }
+    .container { position: relative; width: 100%; max-width: 800px; }
+    img { display: block; width: 100%; height: auto; }
+    /* clickable hotspots over existing logos */
     .social-link { position: absolute; }
-    .linkedin { bottom: 10%; left: 40%; width: 40px; height: 40px; }
-    .x       { bottom: 10%; left: 50%; width: 40px; height: 40px; }
-    .email   { bottom: 10%; left: 60%; width: 40px; height: 40px; }
+    /* adjusted to match the baked-in logos */
+    .linkedin { bottom: 5%; left: 42%; width: 6%; height: 6%; }
+    .x        { bottom: 5%; left: 49%; width: 6%; height: 6%; }
+    .email    { bottom: 5%; left: 56%; width: 6%; height: 6%; }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="./dina-landing-page.png" alt="Dina Landing Page" class="landing-image" />
-    <a href="https://www.linkedin.com/in/hashirjaffry/" target="_blank" class="social-link linkedin" aria-label="LinkedIn"></a>
-    <a href="https://x.com/dina_cfo" target="_blank" class="social-link x" aria-label="X"></a>
+    <img src="./dina-landing-page.png" alt="Dina Landing Page" />
+    <a href="https://www.linkedin.com/in/hashirjaffry/" class="social-link linkedin" target="_blank" aria-label="LinkedIn"></a>
+    <a href="https://x.com/dina_cfo" class="social-link x" target="_blank" aria-label="X"></a>
     <a href="mailto:hashir@dinacfo.com" class="social-link email" aria-label="Email"></a>
   </div>
 </body>
