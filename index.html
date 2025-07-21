@@ -4,86 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dina — AI CFO for the Private Markets</title>
-  <link href="https://fonts.cdnfonts.com/css/neue-machina" rel="stylesheet">
   <style>
-    :root {
-      --bg: #133918;
-      --font: 'Neue Machina', sans-serif;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      background: var(--bg);
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding-top: 20px;
-    }
-    .container {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-    }
-    .landing-image {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    .hotspot {
-      position: absolute;
-      display: block;
-      cursor: pointer;
-      background: rgba(255,255,255,0);
-      z-index: 10;
-      position: absolute;
-      cursor: pointer;
-      background: rgba(255,255,255,0);
-    }
-    /* Adjust these percentage values as needed to overlay your image's logos & button */
-    .book {
-      /* Adjusted to better center the Book button hotspot */
-      top: 30%;
-      left: 25%;
-      width: 50%;
-      height: 12%;
-    }
-    .linkedin {
-      /* Shifted LinkedIn icon hotspot right/up slightly */
-      top: 92%;
-      left: 35%;
-      width: 6%;
-      height: 6%;
-    }
-    .x {
-      /* Shifted X icon hotspot left/up slightly */
-      top: 92%;
-      left: 47%;
-      width: 6%;
-      height: 6%;
-    }
-    .email {
-      /* Shifted Email icon hotspot left/up slightly */
-      top: 92%;
-      left: 59%;
-      width: 6%;
-      height: 6%;
-    }
+    html, body { margin:0; padding:0; background:#133918; display:flex; justify-content:center; }
+    .landing-image { width:100vw; max-width:800px; height:auto; display:block; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Full-page PNG with embedded logos and button -->
-    <img src="./dina-landing-page.png" alt="Dina Landing Page" class="landing-image" />
+  <!-- Full-page PNG with clickable areas via image map -->
+  <img src="./dina-landing-page.png" alt="Dina Landing Page" class="landing-image" usemap="#cta-map">
 
-    <!-- Invisible clickable overlays -->
-    <a href="https://cal.com/hashirjaffry/30min?overlayCalendar=true" target="_blank" class="hotspot book" aria-label="Book a call"></a>
-    <a href="https://www.linkedin.com/in/hashirjaffry/" target="_blank" class="hotspot linkedin" aria-label="LinkedIn"></a>
-    <a href="https://x.com/dina_cfo" target="_blank" class="hotspot x" aria-label="X"></a>
-    <a href="mailto:hashir@dinacfo.com" class="hotspot email" aria-label="Email"></a>
-  </div>
+  <map name="cta-map">
+    <!-- Top "Book a call" button -->
+    <area shape="rect" coords="210,160,590,260" href="https://cal.com/hashirjaffry/30min?overlayCalendar=true" target="_blank" alt="Book a call (top)">
+    <!-- Bottom "Book a call" button -->
+    <area shape="rect" coords="210,3500,590,3600" href="https://cal.com/hashirjaffry/30min?overlayCalendar=true" target="_blank" alt="Book a call (bottom)">
+    <!-- LinkedIn logo -->
+    <area shape="rect" coords="270,3620,350,3700" href="https://www.linkedin.com/in/hashirjaffry/" target="_blank" alt="LinkedIn">
+    <!-- X logo -->
+    <area shape="rect" coords="380,3620,460,3700" href="https://x.com/dina_cfo" target="_blank" alt="X">
+    <!-- Email logo -->
+    <area shape="rect" coords="490,3620,570,3700" href="mailto:hashir@dinacfo.com" alt="Email">
+  </map>
 </body>
 </html>
 
