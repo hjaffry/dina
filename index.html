@@ -10,15 +10,29 @@
       --bg: #133918;
       --font: 'Neue Machina', sans-serif;
     }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { background: var(--bg); display:flex; justify-content:center; align-items:center; min-height:100vh; }
-    .landing-image { max-width:100%; height:auto; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: var(--bg);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* align to top to avoid vertical shift */
+      padding-top: 20px; /* optional top spacing */
+    }
+    .landing-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
   <!-- Single full-page PNG upload -->
   <img src="./dina-landing-page.png" alt="Dina Landing Page" class="landing-image" />
-  <img src="./dina%20landing%20page.png" alt="Dina Landing Page" class="landing-image" />
 </body>
 </html>
 
