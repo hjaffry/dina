@@ -3,24 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dina Landing Page</title>
+  <title>Dina — AI CFO for the Private Markets</title>
   <style>
-    body { margin: 0; background: #133918; display: flex; justify-content: center; }
-    .container { position: relative; width: 100%; max-width: 800px; }
-    img { display: block; width: 100%; height: auto; }
+    html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: #133918; }
+    body { display: flex; justify-content: center; align-items: center; }
+    .container { position: relative; width: 100vw; height: 100vh; }
+    .landing-image { width: 100%; height: 100%; object-fit: cover; }
     .social-link { position: absolute; }
-    .linkedin { bottom: 10%; left: 38%; width: 40px; height: 40px; }
-    .x        { bottom: 10%; left: 50%; width: 40px; height: 40px; }
-    .email    { bottom: 10%; left: 62%; width: 40px; height: 40px; }
+    /* Adjust these to exactly overlay your icons in the full-image layout */
+    .linkedin { bottom: 12%; left: 40%; width: 6%; height: 6%; }
+    .x        { bottom: 12%; left: 50%; width: 6%; height: 6%; }
+    .email    { bottom: 12%; left: 60%; width: 6%; height: 6%; }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="./dina landing page.png" alt="Dina Landing Page" />
+    <img src="./dina-landing-page.png" alt="Dina Landing Page" class="landing-image" />
     <a href="https://www.linkedin.com/in/hashirjaffry/" class="social-link linkedin" target="_blank" aria-label="LinkedIn"></a>
     <a href="https://x.com/dina_cfo" class="social-link x" target="_blank" aria-label="X"></a>
     <a href="mailto:hashir@dinacfo.com" class="social-link email" aria-label="Email"></a>
   </div>
 </body>
 </html>
+
 
