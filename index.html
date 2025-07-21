@@ -8,27 +8,26 @@
   <style>
     :root {
       --bg: #133918;
-      --fg: #ffedb6;
       --font: 'Neue Machina', sans-serif;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: var(--bg); font-family: var(--font); color: var(--fg); }
-    .container { text-align: center; padding: 1rem; }
+    body { background: var(--bg); font-family: var(--font); }
+    .container { position: relative; text-align: center; }
     .landing-image { max-width: 100%; height: auto; display: block; margin: 0 auto; }
-    .links { margin-top: 1rem; }
-    .links a { margin: 0 1rem; color: var(--fg); text-decoration: none; font-size: 1.25rem; }
+    .social-link { position: absolute; }
+    .linkedin { bottom: 10%; left: 40%; width: 40px; height: 40px; }
+    .x       { bottom: 10%; left: 50%; width: 40px; height: 40px; }
+    .email   { bottom: 10%; left: 60%; width: 40px; height: 40px; }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Single full-page PNG upload -->
     <img src="./dina-landing-page.png" alt="Dina Landing Page" class="landing-image" />
-    <div class="links">
-      <a href="https://www.linkedin.com/in/hashirjaffry/" target="_blank">LinkedIn</a>
-      <a href="https://x.com/dina_cfo" target="_blank">X</a>
-      <a href="mailto:hashir@dinacfo.com">Email</a>
-    </div>
+    <a href="https://www.linkedin.com/in/hashirjaffry/" target="_blank" class="social-link linkedin" aria-label="LinkedIn"></a>
+    <a href="https://x.com/dina_cfo" target="_blank" class="social-link x" aria-label="X"></a>
+    <a href="mailto:hashir@dinacfo.com" class="social-link email" aria-label="Email"></a>
   </div>
 </body>
 </html>
+
 
